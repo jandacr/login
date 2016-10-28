@@ -1,0 +1,14 @@
+<!-- template, del inicio jejesito, esta basico, asi que luego se le haran cambios para adecuarlo a tu home -->
+<div class="col-md-6 col-md-offset-3">
+    <h1>Hi {{currentUser.firstName}}!</h1>
+    <p>Ya te logeaste</p>
+    <h3>Estos usuarios son los que hay. Usalos, te los regalo :</h3>
+    <ul>
+        <li *ngFor="let user of users">
+            <!-- este es un muy buen ejemplo de lo visto en la practica video -->
+            {{user.username}} ({{user.firstName}} {{user.lastName}})
+            - <a (click)="deleteUser(user.id)">Eliminar</a>
+        </li>
+    </ul>
+    <p><a [routerLink]="['/login']">Salir</a></p>
+</div>
