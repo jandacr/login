@@ -2,6 +2,8 @@ import { Component, OnInit } from '@angular/core';
  
 import { AlertService } from '../_services/index';
  
+//este codigo es para cuando se recibe una alerta, le avise al html que aparezca en el div
+
 @Component({
     moduleId: module.id,
     selector: 'alert',
